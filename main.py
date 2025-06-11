@@ -20,7 +20,7 @@ def simulate_data(
     Cria um DataFrame de movimentações de materiais (entradas e saídas)
     para várias unidades operacionais ao longo de dias.
     """
-    rng = np.random.default_rng(seed)
+    rng = np.random.default_rng(seed) # Remova a seed para aleatorizar os dados
     dates = pd.date_range(end=pd.Timestamp.today().normalize(), periods=days)
 
     units = [f"U{u+1:02d}" for u in range(n_units)]
